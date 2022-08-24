@@ -11,5 +11,5 @@ tmin:
 	sh min-all.sh $(EXE)
 
 fuzz:
-	afl-fuzz -i input -o output -c $(CEXE) -- $(EXE)
+	afl-fuzz -i input -o output -c $(CEXE) -- ../$(EXE)
 
