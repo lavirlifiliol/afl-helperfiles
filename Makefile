@@ -13,3 +13,6 @@ tmin:
 fuzz:
 	afl-fuzz -i input -o output -c $(CEXE) -- ../$(EXE)
 
+status:
+	afl-whatsup -s output
+	afl-showmap -C -i output -o /dev/null -- ./$(EXE)
